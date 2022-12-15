@@ -197,6 +197,6 @@ header .column span {
 @media screen and (max-width: 650px) {
     .wrapper {
         transform: rotate(90deg);
-        width: 520px;
+        width: 550px;
     }
 }
