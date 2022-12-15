@@ -68,7 +68,52 @@ header .column span {
     left: 35px;
     transition: all 0.3s ease;
     background: #fff;
+}
+.recording input{
+    position: relative;
+    border-radius: 50%;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
 } 
+.recording input:checked::before{
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+.hide_play_btn{
+    display: none;
+}
+#play_Btn{
+    cursor: pointer;
+}
+
 .piano-keys{
     display: flex;
     margin-top: 40px;
